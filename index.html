@@ -92,8 +92,10 @@
     // 🧠 Examples of usage:
     // pushElement([], 1) // should return [1]
     // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
-    function pushElement() {
-
+    function pushElement(arr, value) {
+      let array = arr
+      arr.push(value)
+      return array
     }
 
     // 👉 CHALLENGE 7

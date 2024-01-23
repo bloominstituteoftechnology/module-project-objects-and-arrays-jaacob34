@@ -110,8 +110,9 @@
     // 🧠 At each iteration of the loop, if the current character is not "x", then add it to the end of the result array.
     // 🧠 You can merge the result array back into a string by using join. Example: ["f", "o", "o"].join("") yields "foo"
     // 🧠 Do not forget to return your rejoined string!
-    function stripX() {
-
+    function stripX(string) {
+      let split = string.split('x')
+      return split.join('')
     }
 
     // 👉 CHALLENGE 8

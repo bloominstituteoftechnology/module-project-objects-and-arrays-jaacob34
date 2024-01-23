@@ -23,6 +23,8 @@
     // 🧠 Example of usage:
     // buildPeter() // should return { firstName: "Peter", lastName: "Pan", age: 12 }
     function buildPeter() {
+      let peter = { firstName: "Peter", lastName: "Pan", age: 12 }
+      return peter
 
     }
 
@@ -31,6 +33,9 @@
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
     function buildUser(firstName, lastName, age) {
+
+      let user = { firstName, lastName, age }
+      return user
 
     }
 
@@ -42,8 +47,13 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
-
+    function deletePrice(obj) {
+      if (obj.price !== undefined || obj.price) {
+        delete obj.price
+      } else {
+        obj.priceless = true
+      }
+      return obj
     }
 
     // 👉 CHALLENGE 4
@@ -53,7 +63,11 @@
     // evenList(['a']) // should return false
     // evenList(['a', 'b']) // should return true
     function evenList(arr) {
-
+      if (arr % 2 === 0 || arr.length - 1 === 1) {
+        return true
+      } else {
+        return false
+      }
     }
 
     // 👉 CHALLENGE 5
